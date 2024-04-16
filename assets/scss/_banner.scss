@@ -4,7 +4,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
+@include sm{
+    padding-top: 142px;
+}
     & .container {
         @media only screen and (min-width: 1920px) {
             max-width: 1830px;
@@ -21,6 +23,26 @@
         position: relative;
         z-index: 1;
 
+        @include xxl {
+            height: 1020px;
+            background-size: 100% 1020px;
+        }
+
+        @include xl {
+            height: auto;
+            background-size: cover;
+        }
+
+        @include lg {
+            height: auto;
+            background-size: cover;
+        }
+
+        @include mmd {
+            height: auto;
+            background-size: cover;
+        }
+
         &::after {
             position: absolute;
             z-index: -1;
@@ -32,6 +54,18 @@
             content: "";
             background-color: rgba(56, 22, 120, 0.308);
 
+            @include xl {
+                border-radius: 0;
+            }
+
+            @include lg {
+                display: none;
+            }
+
+            @include mmd {
+                display: none;
+            }
+
         }
 
     }
@@ -40,8 +74,47 @@
         margin-top: -200px;
         margin-left: 70px;
 
+        @include xxl {
+            margin-top: -112px;
+            margin-left: 50px;
+        }
+
+        @include xl {
+            margin-top: 30px;
+            margin-left: 0px;
+        }
+
+        @include lg {
+            margin-top: 30px;
+            margin-left: 0px;
+        }
+
+        @include mmd {
+            margin-top: 30px;
+            margin-left: 0px;
+        }
+
         & img {
             max-width: 848px;
+
+            @include xxl {
+                max-width: 600px;
+            }
+
+            @include xl {
+                max-width: none;
+                width: 100%;
+            }
+
+            @include lg {
+                max-width: none;
+                width: 100%;
+            }
+
+            @include mmd {
+                max-width: none;
+                width: 100%;
+            }
         }
     }
 
@@ -51,19 +124,53 @@
             line-height: 132%;
             margin-bottom: 0;
 
+            @include xxl {
+                font-size: 140px;
+            }
+
+            @include xl {
+                font-size: 120px;
+            }
+
+            @include lg {
+                font-size: 80px;
+            }
+
+            @include mmd {
+                font-size: 65px;
+            }
+            @include ssm{
+                font-size: 50px;
+                line-height: 154%;
+            }
         }
 
         & p {
             @include font-22;
             margin-bottom: 42px;
             padding: 0 218px;
+
+            @include xxl {
+                padding: 0 82px;
+            }
+
+            @include xl {
+                padding: 0 40px;
+            }
+
+            @include lg {
+                padding: 0 40px;
+            }
+
+            @include mmd {
+                padding: 0;
+            }
         }
 
     }
 
     &-card {
-        min-width: 550px;
-        max-width: 550px;
+        width: 550px;
         border: 7px solid rgba(116, 42, 251, 0.7);
         border-radius: 32px;
         padding: 24px 58px;
@@ -71,16 +178,63 @@
         margin-top: -190px;
         margin-right: 80px;
 
+        @include xxl {
+            width: 490px;
+            padding: 24px 30px;
+            margin-right: 18px;
+            margin-top: -155px;
+        }
+
+        @include xl {
+            width: 490px;
+            padding: 24px 30px;
+            margin-right: 0px;
+            margin-top: 40px;
+        }
+
+        @include lg {
+            width: 490px;
+            padding: 24px 30px;
+            margin-right: 0px;
+            margin-top: 40px;
+        }
+
+        @include mmd {
+            width: 490px;
+            padding: 24px 30px;
+            margin-right: 0px;
+            margin-top: 40px;
+        }
+        
+
+        @include sm {
+            width: 375px;
+            border-width: 3px;
+            padding: 24px 16px;
+        }
+        @include ssm{
+            width: 350px;
+        }
+
         & h2 {
             font-size: 28px;
             line-height: 130%;
             margin-bottom: 24px;
+
+            @include sm {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
         }
 
         &-date {
             text-align: center;
             column-gap: 30px;
             margin-bottom: 24px;
+
+            @include sm {
+                column-gap: 16px;
+            }
 
             &-single {
                 --size: 70px;
@@ -150,6 +304,10 @@
                     height: 1px;
                     background-color: #fff;
                     content: '';
+
+                    @include sm {
+                        width: 45px;
+                    }
                 }
 
                 &::before {
@@ -160,6 +318,10 @@
                     height: 1px;
                     background-color: #fff;
                     content: '';
+
+                    @include sm {
+                        width: 45px;
+                    }
                 }
             }
 
@@ -177,12 +339,25 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+@include sm{
+    height: 48px;
+}
+                & img {
+                    @include sm {
+                        max-width: none;
+                        width: 20px;
+                    }
+                }
 
                 & span {
                     font-size: 20px;
-                    font-weight: 600px;
+                    font-weight: 600;
                     padding-left: 8px;
                     color: $white;
+
+                    @include sm {
+                        font-size: 16px;
+                    }
                 }
 
                 &:hover {
@@ -216,6 +391,9 @@
                     border-radius: 8px;
                     background-color: transparent;
                     color: $white;
+                    @include sm{
+                        height: 56px;
+                    }
                 }
 
                 &-btn {
@@ -244,6 +422,10 @@
             & .primary-btn {
                 font-size: 24px;
                 padding: 16px 0;
+                @include sm{
+                    font-size: 20px;
+                    padding: 12px 0;
+                }
             }
         }
 
