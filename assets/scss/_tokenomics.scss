@@ -1,0 +1,98 @@
+.tokenomics {
+    padding-top: 190px;
+    padding-bottom: 322px;
+
+    &-title {
+        margin-bottom: 120px;
+
+        & h1,
+        h2 {
+            @include font-150;
+            line-height: 76%;
+        }
+
+        & h1 {
+            margin-left: 320px;
+        }
+
+        & p {
+            max-width: 672px;
+            margin-left: auto;
+            margin-top: -60px;
+            @include font-22;
+        }
+
+    }
+
+    &-content {
+        &-item {
+            margin-bottom: 48px;
+
+            & h3 {
+                font-size: 39px;
+                line-height: 90%;
+                margin-bottom: 12px;
+            }
+
+            & p {
+                color: #727079;
+                font-size: 20px;
+            }
+        }
+    }
+    &-img{
+        --size:670px;
+        & img{
+            max-width: var(--size);
+        }
+    }
+
+    &-percent {
+        &-single {
+            position: relative;
+            z-index: 1;
+            height: 98px;
+            width: 209px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: 110px;
+
+            }
+
+            &:first-child {
+                & h4 {
+                    color: #3F3F3F;
+                }
+            }
+
+            & h4 {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            & span {
+                position: absolute;
+                z-index: -3;
+                clip-path: polygon(0 0, 100% 0, 100% 56%, 0 56%);
+                top: -48px;
+                left: 50%;
+                transform: translate(-50%, 0);
+                --size: 85px;
+                width: var(--size);
+                height: var(--size);
+                border-radius: 100%;
+                background-image: linear-gradient(to bottom, #9F0D87, #9f0d8700);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+                font-family: $font-2;
+                padding-bottom: 25px;
+            }
+        }
+    }
+}
