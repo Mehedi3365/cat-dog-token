@@ -4,9 +4,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-@include sm{
-    padding-top: 142px;
-}
+
+    @include sm {
+        padding-top: 142px;
+    }
+
     & .container {
         @media only screen and (min-width: 1920px) {
             max-width: 1830px;
@@ -139,7 +141,13 @@
             @include mmd {
                 font-size: 65px;
             }
-            @include ssm{
+
+            @include sm {
+                line-height: 92%;
+                padding-top: 10px;
+            }
+
+            @include ssm {
                 font-size: 50px;
                 line-height: 154%;
             }
@@ -205,14 +213,15 @@
             margin-right: 0px;
             margin-top: 40px;
         }
-        
+
 
         @include sm {
             width: 375px;
             border-width: 3px;
             padding: 24px 16px;
         }
-        @include ssm{
+
+        @include ssm {
             width: 350px;
         }
 
@@ -339,9 +348,11 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-@include sm{
-    height: 48px;
-}
+
+                @include sm {
+                    height: 48px;
+                }
+
                 & img {
                     @include sm {
                         max-width: none;
@@ -391,7 +402,8 @@
                     border-radius: 8px;
                     background-color: transparent;
                     color: $white;
-                    @include sm{
+
+                    @include sm {
                         height: 56px;
                     }
                 }
@@ -422,7 +434,8 @@
             & .primary-btn {
                 font-size: 24px;
                 padding: 16px 0;
-                @include sm{
+
+                @include sm {
                     font-size: 20px;
                     padding: 12px 0;
                 }

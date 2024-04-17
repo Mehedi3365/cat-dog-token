@@ -186,6 +186,11 @@ input[type=number] {
     }
 }
 
+.container {
+    @media only screen and (min-width: 1800px) {
+        max-width: 1650px;
+    }
+}
 
 .primary-btn {
     border: 0;
